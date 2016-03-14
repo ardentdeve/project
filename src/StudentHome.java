@@ -16,7 +16,7 @@ public class StudentHome {
 	 */
 	public StudentHome() {
 		
-		// TODO Auto-generated constructor stub
+		// TODO Auto-generated constructor stubtttt
 	}
 	
 	public Student findByStudentNumber(String n)
