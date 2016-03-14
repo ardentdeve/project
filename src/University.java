@@ -2,6 +2,8 @@ package project;
 
 import java.util.*;
 
+//I WISH I WOULD HAVE AN ANURYSM
+
 public class University {
 
 	private String name;
