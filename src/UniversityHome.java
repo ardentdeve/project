@@ -6,7 +6,7 @@ public class UniversityHome {
 	private List<University> universities;
 	
 	public UniversityHome(){
-		universities = new List<University>();
+		universities = new ArrayList<University>();
 	}
 	
 	public void addUniversityToList(University u){
@@ -18,7 +18,7 @@ public class UniversityHome {
 	}
 	
 	public List<University> getUniversities(){
-		return List<University> universities;
+		return universities;
 	}
 	
 }
