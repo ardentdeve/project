@@ -12,7 +12,7 @@ public class University {
 	private double pctFemale;
 	private int satVerbal;
 	private int satMath;
-	private int expenses;
+	private double expenses;
 	private double pctFinancialAid;
 	private int numberOfApplicants;
 	private double pctAdmitted;
@@ -20,8 +20,30 @@ public class University {
 	private int academicScale;
 	private int socialScale;
 	private int qualityOfLifeScale;
-	private String emphases;
-	private List<University> similarUniversities;
+	private ArrayList<String> specialties;
+	
+	public University(String name, String state, String location, String control,
+			int numStudents, double pf, int vSAT, int mSAT,
+			double expenses, double pfa, int applicants, double pa,
+			double pe, int aScale, int sScale, int lScale, ArrayList<String> e){
+		name = name;
+		this.state = state;
+		this.location = location;
+		this.control = control;
+		this.numberStudents = numStudents;
+		pctFemale = pf;
+		satVerbal = vSAT;
+		satMath = mSAT;
+		expenses = expenses;
+		pctFinancialAid = pfa;
+		numberOfApplicants = applicants;
+		pctAdmitted = pa;
+		pctEnrolled = pe;
+		academicScale = aScale;
+		socialScale = sScale;
+		qualityOfLifeScale = lScale;
+		specialties = e;
+	}
 	
 	/**
 	 * @param name the name to set
@@ -119,18 +141,7 @@ public class University {
 	public void setQualityOfLifeScale(int qualityOfLifeScale) {
 		this.qualityOfLifeScale = qualityOfLifeScale;
 	}
-	/**
-	 * @param emphases the emphases to set
-	 */
-	public void setEmphases(String emphases) {
-		this.emphases = emphases;
-	}
-	/**
-	 * @param similarUniversities the similarUniversities to set
-	 */
-	public void setSimilarUniversities(List<University> similarUniversities) {
-		this.similarUniversities = similarUniversities;
-	}
+
 	/**
 	 * @return the name
 	 */
@@ -227,18 +238,31 @@ public class University {
 	public int getQualityOfLifeScale() {
 		return qualityOfLifeScale;
 	}
-	/**
-	 * @return the emphases
-	 */
-	public String getEmphases() {
-		return emphases;
+	//SPECIALTIES
+		/**
+		 * @return the specialties
+		 */
+	public ArrayList<String> getEmphasis() {
+		return specialties;
 	}
 	/**
-	 * @return the similarUniversities
+	 * @param specialties the specialties to set
 	 */
-	public List<University> getSimilarUniversities() {
-		return similarUniversities;
+	public void setEmphasises(ArrayList<String> specialties) {
+		this.specialties = specialties;
 	}
+		
+	public void addEmphasis(String e) {
+	// TODO Auto-generated method stub
+		specialties.add(e);
+	}
+			
+	public String toString(){
+		String s = "";
+		s = s + "Name: "+ schoolName + " State: " + state;
+		return s;
+  }	
+
 	
 	
 }
