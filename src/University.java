@@ -3,7 +3,7 @@ package project;
 import java.util.*;
 
 public class University {
-
+	//instance variables
 	private String name;
 	private String state;
 	private String location;
@@ -22,6 +22,7 @@ public class University {
 	private int qualityOfLifeScale;
 	private ArrayList<String> specialties;
 	
+	//constructor
 	public University(String name, String state, String location, String control,
 			int numStudents, double pf, int vSAT, int mSAT,
 			double expenses, double pfa, int applicants, double pa,
