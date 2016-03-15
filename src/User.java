@@ -1,5 +1,7 @@
 package project;
 
+import java.util.*;
+
 public class User {
 
 	private String password;
@@ -26,19 +28,43 @@ public class User {
 		//????????????????????????????????????????????????????????
 	}
 	
-	public String getPassword() {
-		return password;
+	//FIRST NAME
+	public String getFirstName() {
+		return firstName;
 	}
-	
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-	
+
+	//LAST NAME
+	public String getLastName() {
+		return lastName;
+	}
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	//USERNAME
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	//PASSWORD
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	//TYPE
+	public char getType() {
+		return type;
+	}
+	public void setType(char type) {
+		this.type = type;
 	}
 }
