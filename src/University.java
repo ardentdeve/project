@@ -2,52 +2,91 @@ package project;
 
 import java.util.*;
 
-//I WISH I WOULD HAVE AN ANURYSM
+//I WISH I WOULD HAVE AN ANEURYSM
 
 public class University {
 	//instance variables
+
+	/** The name of the University*/
 	private String name;
+	/** The state the University is in */
 	private String state;
+	/** The location the University resides in (i.e. urban, suburban)*/
 	private String location;
+	/** The control on the University (i.e. private, public)*/
 	private String control;
+	/** The number of Students enrolled at the University */
 	private int numberStudents;
+	/** The percentage of students enrolled that are female */
 	private double pctFemale;
+	/** The average SAT verbal score for enrolled students */
 	private int satVerbal;
+	/** The average SAT math score for enrolled students*/
 	private int satMath;
+	/** The value of annual expenses or tuition to attend the University*/
 	private double expenses;
+	/** The percent of enrolled students receiving financial aid */
 	private double pctFinancialAid;
+	/** The total number of applicants that apply to the school annually */
 	private int numberOfApplicants;
+	/** The percent of applicants that get admitted */
 	private double pctAdmitted;
+	/** The percent of applicants that decide to enroll */
 	private double pctEnrolled;
+	/** An integer value between 1 and 5 indicating the academic scale of the school */
 	private int academicScale;
+	/** An integer value between 1 and 5 indicating the social life at the school */
 	private int socialScale;
+	/** An integer value between 1 and 5 indicating the quality of life at the school */
 	private int qualityOfLifeScale;
+	/** A list of up to five areas of study in which the schoole excels */
 	private ArrayList<String> specialties;
-	
-	//constructor
+
+
+	/**
+	 * Constructor
+	 * 
+	 * @param 	name name to set
+	 * 		  	state state to set
+	 * 		  	location location to set
+	 * 			control the control to set
+	 * 			numStudents the numberStudents to set
+	 * 			pf the percentFemale to set
+	 * 			vSAT the satVerbal value to set
+	 * 			mSAT the satMath value to set
+	 * 			expenses the expenses value to set
+	 * 			pfa the pctFinancialAid value to set
+	 * 			applicants the numberOfApplicants value to set
+	 * 			pa the pctAdmitted value to set
+	 * 			pe the pctAdmitted value to set
+	 * 			aScale the academicScale to set
+	 * 			sScale the socialScale to set
+	 * 			lScale the the qualityOfLifeScale to set
+	 * 			e the specialties value to set
+	 */
 	public University(String name, String state, String location, String control,
 			int numStudents, double pf, int vSAT, int mSAT,
 			double expenses, double pfa, int applicants, double pa,
 			double pe, int aScale, int sScale, int lScale, ArrayList<String> e){
-		name = name;
+		this.name = name;
 		this.state = state;
 		this.location = location;
 		this.control = control;
 		this.numberStudents = numStudents;
-		pctFemale = pf;
-		satVerbal = vSAT;
-		satMath = mSAT;
-		expenses = expenses;
-		pctFinancialAid = pfa;
-		numberOfApplicants = applicants;
-		pctAdmitted = pa;
-		pctEnrolled = pe;
-		academicScale = aScale;
-		socialScale = sScale;
-		qualityOfLifeScale = lScale;
-		specialties = e;
+		this.pctFemale = pf;
+		this.satVerbal = vSAT;
+		this.satMath = mSAT;
+		this.expenses = expenses;
+		this.pctFinancialAid = pfa;
+		this.numberOfApplicants = applicants;
+		this.pctAdmitted = pa;
+		this.pctEnrolled = pe;
+		this.academicScale = aScale;
+		this.socialScale = sScale;
+		this.qualityOfLifeScale = lScale;
+		this.specialties = e;
 	}
-	
+
 	/**
 	 * @param name the name to set
 	 */
@@ -242,9 +281,9 @@ public class University {
 		return qualityOfLifeScale;
 	}
 	//SPECIALTIES
-		/**
-		 * @return the specialties
-		 */
+	/**
+	 * @return the specialties
+	 */
 	public ArrayList<String> getEmphasis() {
 		return specialties;
 	}
@@ -254,18 +293,26 @@ public class University {
 	public void setEmphasises(ArrayList<String> specialties) {
 		this.specialties = specialties;
 	}
-		
-	public void addEmphasis(String e) {
-	// TODO Auto-generated method stub
-		specialties.add(e);
-	}
-			
-	public String toString(){
-		String s = "";
-		s = s + "Name: "+ schoolName + " State: " + state;
-		return s;
-  }	
 
-	
-	
+	/**
+	 * adds the specified String to the list of specialties
+	 * 
+	 * @param e the emphasis to be added
+	 */
+	public void addEmphasis(String e) {
+		if(specialties.size() < 5)
+			specialties.add(e);
+		else
+			System.out.println("There are already five specialities for this University");
+	}
+
+	/**
+	 * toString method describing the school
+	 * 
+	 * @return String representation of the name of the universtiy and the state it is in
+	 */
+	public String toString(){
+		return s + "Name: "+ schoolName + " State: " + state;
+	}	
+
 }
