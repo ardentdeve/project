@@ -2,7 +2,6 @@ package project;
 
 import java.util.*;
 
-//I WISH I WOULD HAVE AN ANEURYSM
 
 public class University {
 	//instance variables
